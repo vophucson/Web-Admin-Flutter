@@ -37,5 +37,5 @@ class Config {
   static String allAccountUser = '/getUser';
   static String allAccountAdmin = '/getAdmin';
   static String shipOrder ='/shipOrder';
-  static String deleteOrder ='/deleteCart?orderId=';
+  static String deleteOrder ='/deleteOrder?orderId=';
 }

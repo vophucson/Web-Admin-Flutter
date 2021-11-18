@@ -21,7 +21,6 @@ class ApiService {
       "email": email.trim(),
       "password": password.trim(),
     }, headers: {});
-    print(response.statusCode);
     if (response.statusCode == 200 ||
         response.statusCode == 400 ||
         response.statusCode == 401) {

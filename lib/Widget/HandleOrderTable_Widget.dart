@@ -388,8 +388,8 @@ class HandelOrderTable extends StatelessWidget {
                                         text: "Xóa đơn hàng thành công",
                                         confirmBtnText: 'OK',
                                         onConfirmBtnTap: () {
-                                          Get.back();
                                           orderController.fetchHandleOrder();
+                                          Get.back();
                                         },
                                       );
                                     } else {
