@@ -271,7 +271,7 @@ class ProductPage extends StatelessWidget {
                                           context: context,
                                           type: CoolAlertType.success,
                                           confirmBtnColor: Colors.green,
-                                          text: "Thêm thương hiệu thành công",
+                                          text: "Thêm sản phẩm thành công",
                                           confirmBtnText: 'OK',
                                           onConfirmBtnTap: () {
                                             Get.back();

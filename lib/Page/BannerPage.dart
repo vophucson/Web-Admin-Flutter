@@ -157,7 +157,7 @@ class BannerPage extends StatelessWidget {
                                       context: context,
                                       type: CoolAlertType.success,
                                       confirmBtnColor: Colors.green,
-                                      text: "Thêm thương hiệu thành công",
+                                      text: "Thêm quảng cáo thành công",
                                       confirmBtnText: 'OK',
                                       onConfirmBtnTap: () {
                                         Get.back();
