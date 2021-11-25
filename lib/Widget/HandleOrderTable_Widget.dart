@@ -378,7 +378,7 @@ class HandelOrderTable extends StatelessWidget {
                                   orderController.deleteOrder(data.orderId.toString())
                                       .then((value) {
                                     if (value == 1) {
-                                      Get.back();
+                                   //   Get.back();
                                       CoolAlert.show(
                                         width: 50,
                                         backgroundColor: Colors.green,
@@ -388,8 +388,9 @@ class HandelOrderTable extends StatelessWidget {
                                         text: "Xóa đơn hàng thành công",
                                         confirmBtnText: 'OK',
                                         onConfirmBtnTap: () {
-                                          orderController.fetchHandleOrder();
-                                          Get.back();
+                                         Get.back();
+                                         orderController.fetchHandleOrder();
+                                  //        Get.toNamed("/HandelOrder-screen");
                                         },
                                       );
                                     } else {

@@ -45,7 +45,7 @@ class SettingPage extends StatelessWidget {
                       ),
                       onPressed: () {
                         loginController.box.write('token', 'chua_co_tai_khoan_dang_nhap_he_thong');
-                        Get.offAllNamed('/login');
+                        Get.offAllNamed('/login-screen');
                       },
                       child: Text(
                         'Đăng xuất',

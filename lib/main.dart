@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
             new AccountShipperPage(),
         AccountUserPage.id: (BuildContext context) => new AccountUserPage(),
         SettingPage.id: (BuildContext context) => new  SettingPage(),
-        '/login' :(BuildContext context) => new  LoginPage(),
+   //     '/login' :(BuildContext context) => new  LoginPage(),
       },
     );
   }
