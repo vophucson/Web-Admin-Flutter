@@ -22,11 +22,6 @@ class Config {
   static String storeHouse  ='api/house';
   static String checkQuantity = '/checkQuantity?productId=';
   static String updateQuantity ='/updateQuantity';
-  static String shipService = 'Api/Ship';
-  static String allShipService = '/getShipService';
-  static String createService = '/createShipService';
-  static String updateService = '/updateShipService';
-  static String deleteService = '/deleteShipService?Id=';
   static String order = 'Api/order';
   static String handleOrder ='/viewOrderXl';
   static String deliveryOrder = '/viewOrderGh';

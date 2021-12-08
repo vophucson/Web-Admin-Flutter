@@ -37,9 +37,6 @@ class Data {
   dynamic productSize;
   int? quantity;
   int? productPrice;
-  String? shipName;
-  int? shipPrice;
-  int? shipDay;
 
   Data(
       {this.orderId,
@@ -54,9 +51,7 @@ class Data {
         this.productSize,
         this.quantity,
         this.productPrice,
-        this.shipName,
-        this.shipPrice,
-        this.shipDay});
+        });
 
   Data.fromJson(Map<String, dynamic> json) {
     orderId = json['orderId'];
@@ -71,9 +66,7 @@ class Data {
     productSize = json['productSize'];
     quantity = json['quantity'];
     productPrice = json['productPrice'];
-    shipName = json['shipName'];
-    shipPrice = json['ShipPrice'];
-    shipDay = json['shipDay'];
+
   }
 
   Map<String, dynamic> toJson() {
@@ -90,9 +83,7 @@ class Data {
     data['productSize'] = this.productSize;
     data['quantity'] = this.quantity;
     data['productPrice'] = this.productPrice;
-    data['shipName'] = this.shipName;
-    data['ShipPrice'] = this.shipPrice;
-    data['shipDay'] = this.shipDay;
+
     return data;
   }
 }

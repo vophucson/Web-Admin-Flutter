@@ -9,7 +9,6 @@ import 'package:webshop/Model/handelorder_model.dart';
 import 'package:webshop/Model/login_model.dart';
 import 'package:webshop/Model/orderstatus_model.dart';
 import 'package:webshop/Model/product_model.dart';
-import 'package:webshop/Model/shipservice_model.dart';
 import 'package:webshop/Model/truefalse_model.dart';
 import 'package:webshop/Model/user_model.dart';
 
@@ -312,16 +311,7 @@ class ApiService {
       throw Exception('Failed to load data!');
     }
   }
-  static Future<ShipServiceModel> getShipService() async {
-    var url = Uri.parse(Config.url + Config.shipService + Config.allShipService);
-    final response = await client.get(url);
-    print(url);
-    if (response.statusCode == 200 || response.statusCode == 401) {
-      return ShipServiceModel.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Failed to load data!');
-    }
-  }
+
   static Future<HandelOrderModel> getHandleOrder( String token) async {
     var url = Uri.parse(
         Config.url + Config.order + Config.handleOrder);
@@ -434,59 +424,7 @@ class ApiService {
       throw Exception('Failed to load data!');
     }
   }
-  static Future<TrueFalseModel> createService(
-      String shipName, String shipDay,String shipPrice, String token) async {
-    var url = Uri.parse(Config.url + Config.shipService + Config.createService);
-    final body = {
-      "shipName": shipName.trim(),
-      "shipDay": shipDay.trim(),
-      "ShipPrice":shipPrice.trim(),
-    };
-    Map<String, String> headers = {
-      HttpHeaders.authorizationHeader: "Bearer $token",
-    };
-    final response = await client.post(url, body: body, headers: headers);
-    if (response.statusCode == 201 || response.statusCode == 401) {
-      return TrueFalseModel.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Failed to load data!');
-    }
-  }
-  static Future<TrueFalseModel> deleteService(
-      int shipServiceId, String token) async {
-    var url = Uri.parse(
-        Config.url + Config.shipService + Config.deleteService + '$shipServiceId');
-    Map<String, String> headers = {
-      HttpHeaders.authorizationHeader: "Bearer $token",
-    };
-    final response = await client.delete(url, headers: headers);
-    if (response.statusCode == 200 || response.statusCode == 401) {
-      return TrueFalseModel.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Failed to load data!');
-    }
-  }
-  static Future<TrueFalseModel> updateService(String token, int shipServiceId,
-      String shipName, String shipDay,String shipPrice) async {
-    var url = Uri.parse(Config.url + Config.shipService + Config.updateService);
-    Map<String, String> headers = {
-      HttpHeaders.authorizationHeader: "Bearer $token",
-      HttpHeaders.contentTypeHeader: "application/json", //
-    };
-    final body = {
-      "Id":shipServiceId,
-      "shipName": shipName.trim(),
-      "shipDay": shipDay.trim(),
-      "ShipPrice": shipPrice.trim()
-    };
-    final response =
-    await client.patch(url, headers: headers, body: jsonEncode(body));
-    if (response.statusCode == 200 || response.statusCode == 401) {
-      return TrueFalseModel.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Failed to load data!');
-    }
-  }
+
   static Future<TrueFalseModel> shipOrder(String token,int shipperId,String orderId) async {
     var url = Uri.parse(Config.url + Config.order + Config.shipOrder);
     Map<String, String> headers = {

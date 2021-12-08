@@ -14,7 +14,6 @@ import 'package:webshop/Page/HomePage.dart';
 import 'package:webshop/Page/LoginPage.dart';
 import 'package:webshop/Page/ProductPage.dart';
 import 'package:webshop/Page/SettingPage.dart';
-import 'package:webshop/Page/ShipServicePage.dart';
 import 'package:webshop/Page/UserPage.dart';
 
 void main() async {
@@ -39,7 +38,6 @@ class MyApp extends StatelessWidget {
         CategoryPage.id: (BuildContext context) => new CategoryPage(),
         ProductPage.id: (BuildContext context) => new ProductPage(),
         UserPage.id: (BuildContext context) => new UserPage(),
-        ShipServicePage.id: (BuildContext context) => new ShipServicePage(),
         HandleOrderPage.id: (BuildContext context) => new HandleOrderPage(),
         DeliveryOrderPage.id: (BuildContext context) => new DeliveryOrderPage(),
         AcceptedOrderPage.id: (BuildContext context) => new AcceptedOrderPage(),
@@ -49,7 +47,7 @@ class MyApp extends StatelessWidget {
             new AccountShipperPage(),
         AccountUserPage.id: (BuildContext context) => new AccountUserPage(),
         SettingPage.id: (BuildContext context) => new  SettingPage(),
-   //     '/login' :(BuildContext context) => new  LoginPage(),
+     //   '/' :(BuildContext context) => new  LoginPage(),
       },
     );
   }

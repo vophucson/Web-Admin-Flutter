@@ -67,11 +67,6 @@ class HandelOrderTable extends StatelessWidget {
                             )),
                         DataColumn(
                             label: Text(
-                              'Dịch vụ giao hàng',
-                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                            )),
-                        DataColumn(
-                            label: Text(
                               'Tổng tiền',
                               style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                             )),
@@ -110,17 +105,7 @@ class HandelOrderTable extends StatelessWidget {
                                     letterSpacing: -1,
                                   ),
                                 ),
-                              ),
-                              Text(
-                                "Ngày giao: ${data.expireDate}",
-                                style: GoogleFonts.spartan(
-                                  textStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black,
-                                    letterSpacing: -1,
-                                  ),
-                                ),
-                              ),
+                              )
                             ],
                           ),
                         ),
@@ -204,44 +189,6 @@ class HandelOrderTable extends StatelessWidget {
                               ),
                               Text(
                                 "Giá: ${data.productPrice.toVND(unit: 'VNĐ/SP')}",
-                                style: GoogleFonts.spartan(
-                                  textStyle: TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.black,
-                                    letterSpacing: -1,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        DataCell(
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Dịch vụ: ${data.shipName}",
-                                style: GoogleFonts.spartan(
-                                  textStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black,
-                                    letterSpacing: -1,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "Thời gian: ${data.shipDay} ngày",
-                                style: GoogleFonts.spartan(
-                                  textStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black,
-                                    letterSpacing: -1,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "Giá: ${data.shipPrice.toVND(unit: 'VNĐ/ĐH')}",
                                 style: GoogleFonts.spartan(
                                   textStyle: TextStyle(
                                     fontSize: 10,

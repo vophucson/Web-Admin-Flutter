@@ -37,9 +37,6 @@ class Data {
   dynamic productSize;
   int? quantity;
   int? productPrice;
-  String? shipName;
-  int? shipPrice;
-  int? shipDay;
   String? shipperName;
   String? shipperPhone;
   String? status;
@@ -56,9 +53,7 @@ class Data {
         this.productSize,
         this.quantity,
         this.productPrice,
-        this.shipName,
-        this.shipPrice,
-        this.shipDay,
+
         this.shipperName,
         this.shipperPhone,this.status});
 
@@ -75,9 +70,6 @@ class Data {
     productSize = json['productSize'];
     quantity = json['quantity'];
     productPrice = json['productPrice'];
-    shipName = json['shipName'];
-    shipPrice = json['ShipPrice'];
-    shipDay = json['shipDay'];
     shipperName = json['shipperName'];
     shipperPhone = json['shipperPhone'];
     status = json['status'];
@@ -97,9 +89,6 @@ class Data {
     data['productSize'] = this.productSize;
     data['quantity'] = this.quantity;
     data['productPrice'] = this.productPrice;
-    data['shipName'] = this.shipName;
-    data['ShipPrice'] = this.shipPrice;
-    data['shipDay'] = this.shipDay;
     data['shipperName'] = this.shipperName;
     data['shipperPhone'] = this.shipperPhone;
     return data;

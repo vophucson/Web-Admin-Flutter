@@ -13,7 +13,6 @@ import 'package:webshop/Page/HandelOrderPage.dart';
 import 'package:webshop/Page/HomePage.dart';
 import 'package:webshop/Page/ProductPage.dart';
 import 'package:webshop/Page/SettingPage.dart';
-import 'package:webshop/Page/ShipServicePage.dart';
 import 'package:webshop/Page/UserPage.dart';
 
 class   SideBarWidget{
@@ -96,11 +95,6 @@ class   SideBarWidget{
           title: 'Quảng cáo',
           route: BannerPage.id,
           icon: CupertinoIcons.photo,
-        ),
-        MenuItem(
-          title: 'Dịch vụ giao hàng',
-          route: ShipServicePage.id,
-          icon: Icons.run_circle_outlined,
         ),
         MenuItem(
           title: 'Hệ thống',
